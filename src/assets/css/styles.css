@@ -1,0 +1,92 @@
+body {
+  font-size: 16px;
+}
+@font-face {
+  font-family: 'Exo-SemiBold';
+  src: url('../fonts/Exo-SemiBold/Exo-SemiBold.eot');
+  src: local('☺'), url('../fonts/Exo-SemiBold/Exo-SemiBold.woff') format('woff'), url('../fonts/Exo-SemiBold/Exo-SemiBold.ttf') format('truetype'), url('../fonts/Exo-SemiBold/Exo-SemiBold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular/Lato-Regular.eot');
+  src: local('☺'), url('../fonts/Lato-Regular/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular/Lato-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('../fonts/Lora-Regular/Lora-Regular.eot');
+  src: local('☺'), url('../fonts/Lora-Regular/Lora-Regular.woff') format('woff'), url('../fonts/Lora-Regular/Lora-Regular.ttf') format('truetype'), url('../fonts/Lora-Regular/Lora-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold/Montserrat-Bold.eot');
+  src: local('☺'), url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold/Montserrat-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular/Montserrat-Regular.eot');
+  src: local('☺'), url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular/Montserrat-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlayfairDisplay-Regular';
+  src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot');
+  src: local('☺'), url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff') format('woff'), url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf') format('truetype'), url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url('../fonts/Raleway-Bold/Raleway-Bold.eot');
+  src: local('☺'), url('../fonts/Raleway-Bold/Raleway-Bold.woff') format('woff'), url('../fonts/Raleway-Bold/Raleway-Bold.ttf') format('truetype'), url('../fonts/Raleway-Bold/Raleway-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway-ExtraBold';
+  src: url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.eot');
+  src: local('☺'), url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.woff') format('woff'), url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.ttf') format('truetype'), url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url('../fonts/Raleway-Medium/Raleway-Medium.eot');
+  src: local('☺'), url('../fonts/Raleway-Medium/Raleway-Medium.woff') format('woff'), url('../fonts/Raleway-Medium/Raleway-Medium.ttf') format('truetype'), url('../fonts/Raleway-Medium/Raleway-Medium.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('../fonts/Raleway-Regular/Raleway-Regular.eot');
+  src: local('☺'), url('../fonts/Raleway-Regular/Raleway-Regular.woff') format('woff'), url('../fonts/Raleway-Regular/Raleway-Regular.ttf') format('truetype'), url('../fonts/Raleway-Regular/Raleway-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url('../fonts/Raleway-SemiBold/Raleway-SemiBold.eot');
+  src: local('☺'), url('../fonts/Raleway-SemiBold/Raleway-SemiBold.woff') format('woff'), url('../fonts/Raleway-SemiBold/Raleway-SemiBold.ttf') format('truetype'), url('../fonts/Raleway-SemiBold/Raleway-SemiBold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open-Sans-Regular';
+  src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open-Sans-Semibold';
+  src: url('../fonts/Open_Sans/OpenSans-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
