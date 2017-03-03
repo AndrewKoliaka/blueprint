@@ -1,0 +1,19 @@
+{
+  "name": "blueprint",
+  "version": "1.0.0",
+  "description": "psd to html converting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewKoliaka/blueprint.git"
+  },
+  "author": "andrew.koliaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewKoliaka/blueprint/issues"
+  },
+  "homepage": "https://github.com/AndrewKoliaka/blueprint#readme"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "blueprint",
+  "description": "psd to html converting",
+  "main": "index.js",
+  "authors": [
+    "andrew.koliaka"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AndrewKoliaka/blueprint",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
