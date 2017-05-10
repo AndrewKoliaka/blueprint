@@ -467,7 +467,7 @@ input[type="submit"] {
 #beautiful_home,
 #contacts,
 #video_section {
-  background-image: url('/src/assets/images/divider.png');
+  background-image: url("../images/divider.png");
   background-position: top left;
   background-repeat: repeat-x;
 }
@@ -603,7 +603,7 @@ footer #socials {
 }
 header {
   height: 900px;
-  background-image: url("/src/assets/images/header_bg.jpg");
+  background-image: url("../images/header_bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -627,7 +627,7 @@ header h2:last-of-type {
 #our_team {
   height: 683px;
   text-align: center;
-  background-image: url('/src/assets/images/divider.png'), url('/src/assets/images/our_team.jpg');
+  background-image: url('../images/divider.png'), url('../images/our_team.jpg');
   background-repeat: repeat-x, no-repeat;
   background-position: top left, center center;
   background-size: auto, cover;
@@ -714,7 +714,7 @@ header h2:last-of-type {
 #testimonials {
   height: 830px;
   text-align: center;
-  background-image: url('/src/assets/images/testimonials_bg.jpg');
+  background-image: url("../images/testimonials_bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

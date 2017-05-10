@@ -1,12 +1,12 @@
-.bg_image(@url, @pos: center center) {
-    background-image: url(@url);
+.bg_image(@imageName, @pos: center center) {
+    background-image: url("@{images}@{imageName}");
     background-repeat: no-repeat;
     background-position: @pos;
     background-size: cover;
 }
 
 .divider {
-    background-image: url('/src/assets/images/divider.png');
+    background-image: url("@{images}divider.png");
     background-position: top left;
     background-repeat: repeat-x;
 }
