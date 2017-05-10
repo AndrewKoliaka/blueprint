@@ -1,0 +1,66 @@
+.bg_image(@url, @pos: center center) {
+    background-image: url(@url);
+    background-repeat: no-repeat;
+    background-position: @pos;
+    background-size: cover;
+}
+
+.divider {
+    background-image: url('/src/assets/images/divider.png');
+    background-position: top left;
+    background-repeat: repeat-x;
+}
+
+.worker_description {
+    position: absolute;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: @accent;
+    box-shadow: 0px 6px 73px 0px rgba(11, 52, 94, 0.15);
+    width: 277px;
+    height: 137px;
+    text-align: center;
+    animation-duration: 0.5s;
+    div {
+        display: table-cell;
+        vertical-align: middle;
+        span {
+            font-family: Lora, sans-serif;
+            color: #111111;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+}
+
+.close_button(@size: 20px) {
+    cursor: pointer;
+    color: @accent;
+    font-size: @size;
+}
+
+.circle(@bg_color: @accent, @diametr: 32px) {
+    display: inline-block;
+    background-color: @bg_color;
+    border-radius: 50%;
+    height: @diametr;
+    width: @diametr;
+}
+
+.circle_button(@bg_color: @accent,
+@font_color: @accent,
+@font_size: 21px) {
+    cursor: pointer;
+    box-shadow: 0px 5px 18px 0px rgba(22, 99, 178, 0.3);
+    .circle(@bg_color,
+    50px);
+    text-align: center;
+    i {
+        line-height: 1;
+        margin-top: (50px - @font_size)/2;
+        color: @font_color;
+        font-weight: 400;
+        font-size: @font_size;
+    }
+}
