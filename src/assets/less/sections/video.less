@@ -1,4 +1,4 @@
-#video_section {
+#video-section {
     height: 825px;
     text-align: center;
     border-top: thin solid transparent;
@@ -10,5 +10,21 @@
         font-size: 1.313em;
         font-weight: 500;
         line-height: 1.938em;
+    }
+}
+
+@media (max-width: 480px) {
+    #video-section {
+        height: 500px;
+        padding: 0 10px;
+        video {
+            width: 90%;
+            height: auto;
+        }
+
+        p {
+            margin-top: 70px;
+            font-size: 1em;
+        }
     }
 }

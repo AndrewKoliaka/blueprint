@@ -5,113 +5,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="andrew koliaka">
+    <meta name="author" content="andrey koliaka">
     <title>Blueprint</title>
-    <link rel="stylesheet" type="text/css" href="src/assets/libs/normalize-css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="src/assets/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="src/assets/libs/bootstrap-grid-only/css/grid12.css">
-    <link rel="stylesheet" type="text/css" href="src/assets/libs/OwlCarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="src/assets/libs/animate.css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="src/assets/css/styles.css">
+    <link rel="stylesheet" href="src/assets/libs/normalize-css/normalize.css">
+    <link rel="stylesheet" href="src/assets/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/assets/libs/bootstrap-grid-only/css/grid12.css">
+    <link rel="stylesheet" href="src/assets/libs/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="src/assets/libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="src/assets/css/styles.css">
 </head>
 
 <body>
-    <aside id="nav_menu">
-        <a href="#" id="close_menu_btn">
+    <aside id="nav-menu">
+        <a class="btn" id="hide-menu-btn" href="#">
             <i class="fa fa-times" aria-hidden="true"></i>
         </a>
+        <a class="btn none" id="show-menu-btn" href="#">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
         <nav>
-            <ul class="unstyled_list">
-                <li>
-                    <div class="nav_desc">
-                        <span class="nav_desc_wrapper">
+            <ul class="unstyled-list">
+                <li class="nav-menu-element">
+                    <div class="nav-desc hidden-sm hidden-xs">
+                        <span class="nav-desc-wrapper">
                             Home
                         </span>
                     </div>
-                    <div class="nav_dash"></div>
-                    <a href="#site_header">
+                    <div class="nav-dash hidden-sm hidden-xs"></div>
+                    <a class="nav-menu-btn hidden-sm hidden-xs" href="#site-header">
                         <i class="fa fa-home" aria-none="true"></i>
                     </a>
+                    <a class="nav-menu-btn hidden-md hidden-lg" href="#site-header">Home</a>
                 </li>
-                <li>
-                    <div class="nav_desc">
-                        <span class="nav_desc_wrapper">
+                <li class="nav-menu-element">
+                    <div class="nav-desc hidden-sm hidden-xs">
+                        <span class="nav-desc-wrapper">
                             About
                         </span>
                     </div>
-                    <div class="nav_dash"></div>
-                    <a href="#video_section">
+                    <div class="nav-dash hidden-sm hidden-xs"></div>
+                    <a class="nav-menu-btn hidden-sm hidden-xs" href="#video-section">
                         <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
                     </a>
+                    <a class="nav-menu-btn hidden-md hidden-lg" href="#video-section">About</a>
                 </li>
-                <li>
-                    <div class="nav_desc">
-                        <span class="nav_desc_wrapper">
+                <li class="nav-menu-element">
+                    <div class="nav-desc hidden-sm hidden-xs">
+                        <span class="nav-desc-wrapper">
                             Projects
                         </span>
                     </div>
-                    <div class="nav_dash"></div>
-                    <a href="#beautiful_home">
+                    <div class="nav-dash hidden-sm hidden-xs"></div>
+                    <a class="nav-menu-btn hidden-sm hidden-xs" href="#beautiful-home">
                         <i class="fa fa-picture-o" aria-hidden="true"></i>
                     </a>
+                    <a class="nav-menu-btn hidden-md hidden-lg" href="#beautiful-home">Projects</a>
                 </li>
-                <li>
-                    <div class="nav_desc">
-                        <span class="nav_desc_wrapper">
+                <li class="nav-menu-element">
+                    <div class="nav-desc hidden-sm hidden-xs">
+                        <span class="nav-desc-wrapper">
                             Our team
                         </span>
                     </div>
-                    <div class="nav_dash"></div>
-                    <a href="#our_team">
+                    <div class="nav-dash hidden-sm hidden-xs"></div>
+                    <a class="nav-menu-btn hidden-sm hidden-xs" href="#our-team">
                         <i class="fa fa-id-card-o" aria-hidden="true"></i>
                     </a>
+                    <a class="nav-menu-btn hidden-md hidden-lg" href="#our-team">Our team</a>
                 </li>
-                <li>
-                    <div class="nav_desc">
-                        <span class="nav_desc_wrapper">
+                <li class="nav-menu-element">
+                    <div class="nav-desc hidden-sm hidden-xs">
+                        <span class="nav-desc-wrapper">
                             Testimonials
                         </span>
                     </div>
-                    <div class="nav_dash"></div>
-                    <a href="#testimonials">
+                    <div class="nav-dash hidden-sm hidden-xs"></div>
+                    <a class="nav-menu-btn hidden-sm hidden-xs" href="#testimonials">
                         <i class="fa fa-microphone" aria-hidden="true"></i>
                     </a>
+                    <a class="nav-menu-btn hidden-md hidden-lg" href="#testimonials">Reviews</a>
                 </li>
-                <li>
-                    <div class="nav_desc">
-                        <span class="nav_desc_wrapper">
+                <li class="nav-menu-element">
+                    <div class="nav-desc hidden-sm hidden-xs">
+                        <span class="nav-desc-wrapper">
                             Contacts
                         </span>
                     </div>
-                    <div class="nav_dash"></div>
-                    <a href="#contacts">
+                    <div class="nav-dash hidden-sm hidden-xs"></div>
+                    <a class="nav-menu-btn hidden-sm hidden-xs" href="#contacts">
                         <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                     </a>
+                    <a class="nav-menu-btn hidden-md hidden-lg" href="#contacts">Contacts</a>
                 </li>
             </ul>
         </nav>
     </aside>
-    <header id="site_header">
+    <header id="site-header">
         <div class="container">
             <div class="row">
-                <a href="#" id="logo"><img src="src/assets/images/logo.png"></a>
+                <a id="logo" href="#"><img src="src/assets/images/logo.png" alt="blueprint"></a>
                 <h2>We Are</h2>
                 <h1>Ready For blueprint</h1>
                 <h2>WE CAN MAKE YOUR HOME BEAUTIFUL</h2>
-                <a href="#beautiful_home" id="our_works_btn">Our Works</a>
+                <a id="our-works-btn" href="#beautiful-home">Our Works</a>
             </div>
-            <a href="#video_section" id="scroll_down_btn">
+            <a class="btn" id="scroll-down-btn" href="#video-section">
                 <i class="fa fa-angle-down" aria-none="true"></i>
             </a>
         </div>
     </header>
-    <section id="video_section">
+    <section id="video-section">
         <div class="container">
             <div class="row">
                 <p>Keep away from people who try to belittle Good just ask Planning
-                    <br> your ambitions Design people always do that bbvut the really
-                    <br> great. Friendly neighbour there that power. Keep away Architecture
-                    <br> who try to Ambitions people do that really great.</p>
+                    <br class="hidden-xs"> your ambitions Design people always do that bbvut the really
+                    <br class="hidden-xs"> great. Friendly neighbour there that power. Keep away Architecture
+                    <br class="hidden-xs"> who try to Ambitions people do that really great.</p>
                 <video width="640" height="453" controls>
                     Your browser does not support the video tag.
                     <source src="src/assets/videos/VfE_html5.mp4" type="video/mp4">
@@ -120,13 +129,13 @@
             </div>
         </div>
     </section>
-    <section id="beautiful_home">
+    <section id="beautiful-home">
         <div class="container">
             <div class="row">
                 <h2>WE CAN MAKE YOUR<br> HOME BEAUTIFUL</h2>
                 <div class="col-md-4 nopadding">
                     <div class="card">
-                        <div class="top_serif"></div>
+                        <div class="top-serif hidden-sm hidden-xs"></div>
                         <div class="icon is-icon-active">
                             <div class="icon-cube-w"></div>
                         </div>
@@ -137,7 +146,7 @@
                 </div>
                 <div class="col-md-4 nopadding">
                     <div class="card">
-                        <div class="top_serif"></div>
+                        <div class="top-serif hidden-sm hidden-xs"></div>
                         <div class="icon">
                             <div class="icon-speedometer"></div>
                         </div>
@@ -146,9 +155,9 @@
                             interdum viverra sapien.</p>
                     </div>
                 </div>
-                <div class="col-md-4 nopadding_left">
+                <div class="col-md-4 nopadding-left">
                     <div class="card">
-                        <div class="top_serif"></div>
+                        <div class="top-serif hidden-sm hidden-xs"></div>
                         <div class="icon">
                             <div class="icon-line-chart"></div>
                         </div>
@@ -157,40 +166,40 @@
                             interdum viverra sapien.</p>
                     </div>
                 </div>
-                <div id="right_line"></div>
-                <div id="bottom_line"></div>
+                <div id="right-line" class="hidden-xs hidden-sm"></div>
+                <div id="bottom-line" class="hidden-xs hidden-sm"></div>
                 <div class="col-md-offset-1 col-md-10">
                     <div id="carousel">
                         <div class="owl-carousel">
                             <figure class="slide">
                                 <img src="src/assets/images/project1.jpg" alt="project 1">
                                 <figcaption>
-                                    <h3>Project name 01</h3>
+                                    <h3 class="project-name">Project name 01</h3>
                                     <address><i class="fa fa-map-marker"></i> MI, 302, Road 22</address>
                                 </figcaption>
-                                <div class="expand_btn"><i class="fa fa-expand"></i></div>
+                                <div class="btn expand-btn"><i class="fa fa-expand"></i></div>
                             </figure>
                             <figure class="slide">
                                 <img src="src/assets/images/project2.jpg" alt="project 2">
                                 <figcaption>
-                                    <h3>Project name 02</h3>
+                                    <h3 class="project-name">Project name 02</h3>
                                     <address><i class="fa fa-map-marker"></i> MI, 436, Road 10b</address>
                                 </figcaption>
-                                <div class="expand_btn"><i class="fa fa-expand"></i></div>
+                                <div class="btn expand-btn"><i class="fa fa-expand"></i></div>
                             </figure>
                             <figure class="slide">
                                 <img src="src/assets/images/project3.jpg" alt="project 3">
                                 <figcaption>
-                                    <h3>Project name 03</h3>
+                                    <h3 class="project-name">Project name 03</h3>
                                     <address><i class="fa fa-map-marker"></i> MI, 543, Road 52</address>
                                 </figcaption>
-                                <div class="expand_btn"><i class="fa fa-expand"></i></div>
+                                <div class="btn expand-btn"><i class="fa fa-expand"></i></div>
                             </figure>
                         </div>
-                        <div id="prev-btn">
+                        <div class="btn" id="prev-btn">
                             <i class="fa fa-angle-left"></i>
                         </div>
-                        <div id="next-btn">
+                        <div class="btn" id="next-btn">
                             <i class="fa fa-angle-right"></i>
                         </div>
                     </div>
@@ -198,67 +207,68 @@
             </div>
         </div>
     </section>
-    <section id="our_team">
+    <section id="our-team">
         <div class="container">
             <div class="row">
                 <h2>Meet The Team</h2>
                 <p>Keep away from people who try to belittle Good just ask Plunning
-                    <br> your ambitions. Design people always do that, but the really
-                    <br> great make you feel that you, too, can become great. Friendly neighbour there that power.</p>
-                <div id="circles">
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-minus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
-                    <div class="show_info_btn"><i class="fa fa-plus"></i></div>
+                    <br class="hidden-xs"> your ambitions. Design people always do that, but the really
+                    <br class="hidden-xs"> great make you feel that you, too, can become great. Friendly neighbour there
+                    that power.</p>
+                <div id="circles" class="hidden-sm hidden-xs">
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-minus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
+                    <div class="btn show-info-btn"><i class="fa fa-plus"></i></div>
                 </div>
-                <div id="descriptions">
-                    <div class="worker_desc animated fadeIn none">
+                <div class="hidden-sm hidden-xs" id="descriptions">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Veronica Knight</h3>
                             <span>Cartwright</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn none">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Julius Nichols</h3>
                             <span>Chemist</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn none">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Becky Cohen</h3>
                             <span>Academic</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn table">
+                    <div class="worker-desc animated fadeIn table">
                         <div>
                             <h3>Jeffrey Fowler</h3>
                             <span>Project Manager</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn none">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Jan Casey</h3>
                             <span>Ship Builder</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn none">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Israel Cross</h3>
                             <span>Runecrafter</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn none">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Mario Black</h3>
                             <span>Pyromancer</span>
                         </div>
                     </div>
-                    <div class="worker_desc animated fadeIn none">
+                    <div class="worker-desc animated fadeIn none">
                         <div>
                             <h3>Mandy Lopez</h3>
                             <span>Astronomist</span>
@@ -271,23 +281,24 @@
     <section id="stats">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-xs-4 col-sm-4 col-md-4">
                     <div class="number" data-counterup-time="2500" data-counterup-delay="30">150,192</div>
-                    <h3>Satisfied Users</h3>
-                    <p>Lorem Ipsum is simply dummy text of
-                        <br> the printing and typesetting.</p>
+                    <h3 class="stat-name">Satisfied Users</h3>
+                    <p class="stat-desc">Lorem Ipsum is simply dummy text of
+                        <br class="hidden-xs hidden-sm"> the printing and typesetting.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-4 col-sm-4 col-md-4">
                     <div class="number" data-counterup-time="2500" data-counterup-delay="30">5,972</div>
-                    <h3>Coffee Cups</h3>
-                    <p>Lorem Ipsum is simply dummy text of
-                        <br> the printing and typesetting.</p>
+                    <h3 class="stat-name">Coffee Cups</h3>
+                    <p class="stat-desc">Lorem Ipsum is simply dummy text of
+                        <br class="hidden-xs hidden-sm"> the printing and typesetting.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-4 col-sm-4 col-md-4">
                     <div class="number" data-counterup-time="2500" data-counterup-delay="30">1500</div>
-                    <h3>Projects</h3>
-                    <p>Lorem Ipsum is simply dummy text of
-                        <br> the printing and typesetting.</p>
+                    <h3 class="stat-name">Projects</h3>
+                    <br class="hidden-lg hidden-md hidden-sm">
+                    <p class="stat-desc">Lorem Ipsum is simply dummy text of
+                        <br class="hidden-xs hidden-sm"> the printing and typesetting.</p>
                 </div>
             </div>
         </div>
@@ -297,79 +308,79 @@
             <h2>Testimonials</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="testimonial_wrapper">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    <div class="testimonial-wrapper">
+                        <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s, when</p>
                         <div class="angle"></div>
                     </div>
-                    <div class="testimonial_footer">
-                        <span class="gray_circle"></span>
-                        <div class="author_row">
-                            <span class="testimonial_author">Woeldlof Miki</span>
+                    <div class="testimonial-footer">
+                        <span class="gray-circle"></span>
+                        <div class="author-row">
+                            <span class="testimonial-author">Woeldlof Miki</span>
                             <span>/</span>
                             <span>symu.co</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="testimonial_wrapper">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    <div class="testimonial-wrapper">
+                        <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s, when</p>
                         <div class="angle"></div>
                     </div>
-                    <div class="testimonial_footer">
-                        <span class="gray_circle"></span>
-                        <div class="author_row">
-                            <span class="testimonial_author">Woeldlof Miki</span>
+                    <div class="testimonial-footer">
+                        <span class="gray-circle"></span>
+                        <div class="author-row">
+                            <span class="testimonial-author">Woeldlof Miki</span>
                             <span>/</span>
                             <span>symu.co</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="testimonial_wrapper">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    <div class="testimonial-wrapper">
+                        <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s, when</p>
                         <div class="angle"></div>
                     </div>
-                    <div class="testimonial_footer">
-                        <span class="gray_circle"></span>
-                        <div class="author_row">
-                            <span class="testimonial_author">Woeldlof Miki</span>
+                    <div class="testimonial-footer">
+                        <span class="gray-circle"></span>
+                        <div class="author-row">
+                            <span class="testimonial-author">Woeldlof Miki</span>
                             <span>/</span>
                             <span>symu.co</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row hidden-xs hidden-sm">
                 <div class="col-md-8">
-                    <div class="testimonial_wrapper">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    <div class="testimonial-wrapper">
+                        <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
                             type and scrambled it to make a type specimen book. It has survived not only five centuries,
                             but also the leap into electronic typesetting, remaining essentially.</p>
                         <div class="angle"></div>
                     </div>
-                    <div class="testimonial_footer">
-                        <span class="gray_circle"></span>
-                        <div class="author_row">
-                            <span class="testimonial_author">Woeldlof Miki</span>
+                    <div class="testimonial-footer">
+                        <span class="gray-circle"></span>
+                        <div class="author-row">
+                            <span class="testimonial-author">Woeldlof Miki</span>
                             <span>/</span>
                             <span>symu.co</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="testimonial_wrapper">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    <div class="testimonial-wrapper">
+                        <p class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s, when</p>
                         <div class="angle"></div>
                     </div>
-                    <div class="testimonial_footer">
-                        <span class="gray_circle"></span>
-                        <div class="author_row">
-                            <span class="testimonial_author">Woeldlof Miki</span>
+                    <div class="testimonial-footer">
+                        <span class="gray-circle"></span>
+                        <div class="author-row">
+                            <span class="testimonial-author">Woeldlof Miki</span>
                             <span>/</span>
                             <span>symu.co</span>
                         </div>
@@ -384,25 +395,24 @@
                 <h2>Send a message using<br> the form below!</h2>
                 <div class="col-md-6">
                     <form method="POST" action="#">
-                        <input type="text" name="name" placeholder="Name">
+                        <input name="name" type="text" placeholder="Name">
                         <br>
-                        <input type="email" name="email" placeholder="Email">
+                        <input name="email" type="email" placeholder="Email">
                         <br>
-                        <select>
-                            <option>Subject</option>
-                            <option>Subject1</option>
-                            <option>Subject2</option>
-                            <option>Subject3</option>
+                        <select name="subject">
+                            <option value="sub">Subject</option>
+                            <option value="sub1">Subject1</option>
+                            <option value="sub2">Subject2</option>
+                            <option value="sub3">Subject3</option>
                         </select>
                         <br>
-                        <textarea rows="10" placeholder="What do you want to say..."></textarea>
+                        <textarea name="message" rows="10" placeholder="What do you want to say..."></textarea>
                         <br>
-                        <input type="submit" name="submit" value="Submit Now">
+                        <input type="submit" value="Submit Now">
                     </form>
                 </div>
                 <div class="col-md-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83857964278!2d144.95760901566567!3d-37.81724977975189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642c7d216f19d%3A0xf75b2025eba04655!2sAustralia+Post+-+Melb+Collins+St+West+Post+Shop!5e0!3m2!1sen!2sua!4v1489599845026"
-                        width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83857964278!2d144.95760901566567!3d-37.81724977975189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642c7d216f19d%3A0xf75b2025eba04655!2sAustralia+Post+-+Melb+Collins+St+West+Post+Shop!5e0!3m2!1sen!2sua!4v1489599845026" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 
                     <address class="vcard">
                         <h3>Postal Address</h3>
@@ -421,7 +431,7 @@
         <div class="container">
             <div class="row">
                 <small id="copyright">Copyright © <strong>Symu.co</strong></small>
-                <ul id="socials" class="unstyled_list">
+                <ul class="unstyled-list" id="socials">
                     <li><a href="#facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="#google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>

@@ -1,11 +1,12 @@
 //variables
 @border: 2px solid @secondary;
 
-#beautiful_home {
-    background-color: #f9f9f9;
-    height: 1286px;
+#beautiful-home {
     &:extend(.divider);
+    height: 1286px;
     text-align: center;
+    background-color: #f9f9f9;
+    
     h2 {
         margin-top: 99px;
         margin-bottom: 55px;
@@ -15,7 +16,7 @@
         text-align: left;
         border-left: @border;
         border-bottom: @border;
-        .top_serif {
+        .top-serif {
             width: 30px;
             border-top: @border;
         }
@@ -45,17 +46,31 @@
             text-align: left;
         }
     }
-    #right_line {
+    #right-line {
         border-left: @border;
         height: 572px;
         margin-right: 15px;
         float: right;
     }
-    #bottom_line {
+    #bottom-line {
         border-bottom: @border;
         position: absolute;
         top: 966px;
         right: 15px;
         width: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    #beautiful-home {
+        .card {
+            border: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #beautiful-home {
+        height: 1200px;
     }
 }

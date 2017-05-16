@@ -1,6 +1,6 @@
 header {
     height: 900px;
-    .bg_image("header_bg.jpg");
+    .bg-image("header_bg.jpg");
     text-align: center;
     color: @accent;
     #logo {
@@ -16,5 +16,18 @@ header {
     h2:last-of-type {
         margin-top: 20px;
         font-family: Lora, sans-serif;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 600px;
+        padding: 0 20px;
+
+        #logo { left: 0; }
+
+        h1 { font-size: 3em; }
+
+        h2:first-of-type { margin-top: 150px; }
     }
 }

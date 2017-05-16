@@ -27,7 +27,7 @@
              });
              $('#prev-btn').click(this.prevSlide);
              $('#next-btn').click(this.nextSlide);
-             $('.expand_btn').click(this.expand);
+             $('.expand-btn').click(this.expand);
 
             //  if slide in full screen - disable scrolling
              $('body').on('mousewheel', function (event) {
@@ -43,7 +43,7 @@
              owl.trigger('prev.owl.carousel');
          },
          expand: function (event) {
-             if ($('#expaded_slide').length === 1) {
+             if ($('#expaded-slide').length === 1) {
                  return false;
              }
              isScrollAllowed = false;
@@ -51,9 +51,9 @@
              var img = $(slide.children().get(0));
              var caption = $(slide.children().get(1));
 
-             var expaded_slide = $(`
-            <div id="expanded_slide">
-                <span id="close_btn">
+             var expadedSlide = $(`
+            <div id="expanded-slide">
+                <span id="close-btn">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>
                 <figure>
@@ -63,8 +63,8 @@
                     </figcaption>
                 </figure>
             </div>`).appendTo(document.body);
-             $('#close_btn').click(() => {
-                 $('#expanded_slide').remove();
+             $('#close-btn').click(() => {
+                 $('#expanded-slide').remove();
                  owl.trigger('play.owl.autoplay', [1000]);
                  isScrollAllowed = true;
              });

@@ -1,6 +1,6 @@
 function showHideWorkerInit() {
     var z_coord = 1; //z-index value for worker description 
-    $('.show_info_btn').click(function (event) {
+    $('.show-info-btn').click(function (event) {
         event.stopPropagation();
         var target = $(event.target);
         var index = 0; //worker serial number
@@ -12,7 +12,7 @@ function showHideWorkerInit() {
             $(target.children().get(0)).toggleClass('fa-plus').toggleClass('fa-minus');
             index = target.index();
         }
-        desc = $($('.worker_desc').get(index));
+        desc = $($('.worker-desc').get(index));
         desc.css('z-index', ++z_coord).toggleClass('table').toggleClass('none');
     });
 }
@@ -22,26 +22,45 @@ function countUp() {
 }
 
 function navigation() {
-    var navMenu = $('#nav_menu');
+    var navMenu = $('#nav-menu');
     var timerObj = setTimeout(function () {
-        navMenu.addClass('nav_compressed');
+        navMenu.addClass('nav-compressed');
+        toggleButtons();
     }, 5000);
 
-    $('#close_menu_btn').click(function (event) {
+    $('#hide-menu-btn').click(function (event) {
         event.preventDefault();
-        navMenu.toggleClass('nav_compressed');
+        toggleMenu();
+    });
+
+    $('#show-menu-btn').click(function (event) {
+        event.preventDefault();
+        toggleMenu();
     });
     navMenu.mouseenter(function () {
         clearTimeout(timerObj);
-        navMenu.removeClass('nav_compressed');
+        navMenu.removeClass('nav-compressed');
+        $('#hide-menu-btn').removeClass('none');
+        $('#show-menu-btn').addClass('none');
     });
     navMenu.mouseleave(function () {
-        if (!navMenu.hasClass('nav_compressed')) {
+        if (!navMenu.hasClass('nav-compressed')) {
             timerObj = setTimeout(function () {
-                navMenu.addClass('nav_compressed');
+                navMenu.addClass('nav-compressed');
+                toggleButtons();
             }, 2000);
         }
     });
+
+    function toggleButtons() {
+        $('#hide-menu-btn').toggleClass('none');
+        $('#show-menu-btn').toggleClass('none');
+    }
+
+    function toggleMenu() {
+        toggleButtons();
+        navMenu.toggleClass('nav-compressed');
+    }
 }
 
 $(document).ready(function () {

@@ -1,4 +1,4 @@
-#our_team {
+#our-team {
     height: 683px;
     text-align: center;
     background-image: url('@{images}divider.png'), url('@{images}our_team.jpg');
@@ -10,8 +10,8 @@
         margin-bottom: 50px;
     }
     #descriptions {
-        .worker_desc {
-            .worker_description;
+        .worker-desc {
+            .worker-description;
             bottom: -137px;
             &:nth-child(1) {
                 left: -60px;
@@ -38,5 +38,11 @@
                 left: 924px;
             }
         }
+    }
+}
+
+@media (max-width: 480px) {
+    #our-team {
+        height: 500px;
     }
 }

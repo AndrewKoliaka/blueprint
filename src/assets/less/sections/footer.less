@@ -1,4 +1,6 @@
 footer {
+    position: relative;
+    bottom: 0;
     background-color: @bg_dark;
     color: #fbfbfb;
     height: 81px;
@@ -19,7 +21,14 @@ footer {
         }
     }
 
-    #copyright, #socials {
+    #copyright, 
+    #socials {
         margin-top: (81px - 16px) / 2;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 0 10px;
     }
 }
