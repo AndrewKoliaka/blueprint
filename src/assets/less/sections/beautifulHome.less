@@ -3,8 +3,8 @@
 
 #beautiful-home {
     &:extend(.divider);
-    height: 1286px;
     text-align: center;
+    padding-bottom: 80px;
     background-color: #f9f9f9;
     
     h2 {
@@ -61,16 +61,11 @@
     }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 1200px) {
     #beautiful-home {
+        padding-bottom: 50px;
         .card {
             border: none;
         }
-    }
-}
-
-@media (max-width: 480px) {
-    #beautiful-home {
-        height: 1200px;
     }
 }

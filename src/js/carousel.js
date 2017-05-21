@@ -29,7 +29,7 @@
              $('#next-btn').click(this.nextSlide);
              $('.expand-btn').click(this.expand);
 
-            //  if slide in full screen - disable scrolling
+             //  if slide in full screen - disable scrolling
              $('body').on('mousewheel', function (event) {
                  if (!isScrollAllowed) {
                      event.preventDefault();
@@ -47,7 +47,7 @@
                  return false;
              }
              isScrollAllowed = false;
-             var slide = $(this).parent();
+             var slide = $(this).parent().parent();
              var img = $(slide.children().get(0));
              var caption = $(slide.children().get(1));
 

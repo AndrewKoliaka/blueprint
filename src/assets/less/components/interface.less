@@ -73,7 +73,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -8px;
+    top: -25px;
     z-index: 9999;
     margin: 0 auto;
 }
@@ -92,9 +92,11 @@
         img { width: 100%; }
 
         figcaption {
+            position: relative;
             text-align: center;
+            border: thin solid transparent;
             .project-name {
-                margin-top: 56px;
+                margin-top: 50px;
                 font-size: 1.313em;
                 color: @secondary;
             }
@@ -130,7 +132,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #carousel {
         #prev-btn, #next-btn {
             top: 50%;
@@ -161,6 +163,7 @@
     }
 
     figcaption {
+        .expand-btn { display: none; }
         padding: 20px 0;
         color: @accent;
     }

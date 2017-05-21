@@ -13,14 +13,19 @@
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 640px) {
+    #video-section {
+        video { 
+            width: 95%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
     #video-section {
         height: 500px;
         padding: 0 10px;
-        video {
-            width: 90%;
-            height: auto;
-        }
 
         p {
             margin-top: 70px;

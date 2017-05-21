@@ -1,5 +1,4 @@
 #testimonials {
-    height: 830px;
     text-align: center;
     .bg-image("testimonials_bg.jpg");
     h2 {
@@ -61,22 +60,20 @@
     }
 }
 
-@media (max-width: 480px) {
-    #testimonials {
-        height: 780px;
+@media screen and (max-width: 1200px) {
+    #testimonials .testimonial-wrapper {
+        height: auto;
+        .testimonial-text {
+            padding: 10px 10px;
+        }
+    }
+}
 
+@media screen and (max-width: 992px) {
+    #testimonials {
         h2 {
             margin-top: 45px;
             margin-bottom: 20px;
-        }
-
-        .testimonial-wrapper {
-            height: auto;
-
-            .testimonial-text {
-                padding: 10px 10px;
-            }
-            
         }
     }
 }

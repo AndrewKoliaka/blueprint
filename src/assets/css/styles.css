@@ -308,7 +308,7 @@ input[type="submit"] {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -8px;
+  top: -25px;
   z-index: 9999;
   margin: 0 auto;
 }
@@ -333,10 +333,12 @@ input[type="submit"] {
   width: 100%;
 }
 #carousel .slide figcaption {
+  position: relative;
   text-align: center;
+  border: thin solid transparent;
 }
 #carousel .slide figcaption .project-name {
-  margin-top: 56px;
+  margin-top: 50px;
   font-size: 1.313em;
   color: #1b7ce0;
 }
@@ -400,6 +402,9 @@ input[type="submit"] {
 #expanded-slide figcaption {
   padding: 20px 0;
   color: #ffffff;
+}
+#expanded-slide figcaption .expand-btn {
+  display: none;
 }
 #expanded-slide #close-btn {
   color: #ffffff;
@@ -563,8 +568,8 @@ input[type="submit"] {
   line-height: 21px;
 }
 #beautiful-home {
-  height: 1286px;
   text-align: center;
+  padding-bottom: 80px;
   background-color: #f9f9f9;
 }
 #beautiful-home h2 {
@@ -620,14 +625,12 @@ input[type="submit"] {
   right: 15px;
   width: 140px;
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 1200px) {
+  #beautiful-home {
+    padding-bottom: 50px;
+  }
   #beautiful-home .card {
     border: none;
-  }
-}
-@media (max-width: 480px) {
-  #beautiful-home {
-    height: 1200px;
   }
 }
 #contacts {
@@ -655,7 +658,7 @@ input[type="submit"] {
   font-size: 0.875em;
   line-height: 30px;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 992px) {
   #contacts {
     padding-top: 70px;
   }
@@ -797,7 +800,7 @@ header h2:last-of-type {
 #our-team #descriptions .worker-desc:nth-child(8) {
   left: 924px;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 1200px) {
   #our-team {
     height: 500px;
   }
@@ -829,7 +832,13 @@ header h2:last-of-type {
   font-weight: 400;
   line-height: 2em;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 1200px) and (min-width: 640px) {
+  #stats {
+    height: 400px;
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 640px) {
   #stats {
     height: 300px;
     padding-top: 50px;
@@ -848,7 +857,6 @@ header h2:last-of-type {
   }
 }
 #testimonials {
-  height: 830px;
   text-align: center;
   background-image: url("../images/testimonials_bg.jpg");
   background-repeat: no-repeat;
@@ -916,19 +924,18 @@ header h2:last-of-type {
 #testimonials .testimonial-footer .author-row .testimonial-author {
   text-transform: uppercase;
 }
-@media (max-width: 480px) {
-  #testimonials {
-    height: 780px;
-  }
-  #testimonials h2 {
-    margin-top: 45px;
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 1200px) {
   #testimonials .testimonial-wrapper {
     height: auto;
   }
   #testimonials .testimonial-wrapper .testimonial-text {
     padding: 10px 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #testimonials h2 {
+    margin-top: 45px;
+    margin-bottom: 20px;
   }
 }
 #video-section {
@@ -944,14 +951,16 @@ header h2:last-of-type {
   font-weight: 500;
   line-height: 1.938em;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 640px) {
+  #video-section video {
+    width: 95%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
   #video-section {
     height: 500px;
     padding: 0 10px;
-  }
-  #video-section video {
-    width: 90%;
-    height: auto;
   }
   #video-section p {
     margin-top: 70px;
