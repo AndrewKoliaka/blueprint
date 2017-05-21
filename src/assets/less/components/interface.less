@@ -1,3 +1,6 @@
+@smallMenuBackground: rgba( 20, 20, 20, 0.8);
+@smallMenuHeight: 60px;
+
 .btn {
     cursor: pointer;
 }
@@ -239,18 +242,62 @@
     }
 }
 
-@media (max-width: 992px) {
-    #nav-menu {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: auto;
-        width: 80px;
-        min-height: 66px;
-    }
+@media screen and (max-width: 1200px) {
+        #nav-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            bottom: auto;
+            height: @smallMenuHeight;
+            min-height: @smallMenuHeight;
+            background: @smallMenuBackground;
+        
+            #hide-menu-btn, #show-menu-btn {
+                float: right;
+                margin-right: 20px;
+                margin-top: 0;
+                line-height: 60px;
+            }
 
-    .nav-compressed {
-        width: 50px !important;
-        opacity: 0.8;
-    }
-}
+        nav {
+            margin-top: 0;
+
+            .logo {
+                float: left;
+                margin-left: 10px;
+                margin-top: (@smallMenuHeight - 40px) / 2;
+                img { height: 40px; }
+            }
+
+            #nav-menu-list {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                border-top: thin solid @accent;
+                height: @smallMenuHeight;
+
+                .nav-menu-element {
+                    display: inline-block;
+                    width: 100%;
+                    display: block;
+                    margin-right: -5px;
+                    margin-bottom: 0;
+                    line-height: @smallMenuHeight;
+                    background-color: @bg_dark; 
+
+                    .nav-menu-btn {
+                        padding: 0 10px;
+                        transition: all .3s;
+                        &:focus {
+                            background-color: darken(@accent, 10%);
+                            color: @bg_dark;
+                        }
+                    }
+                } // .nav-menu-element
+            } // .nav-menu-list
+        } // nav
+    } // #nav-menu
+} // @media

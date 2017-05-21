@@ -474,18 +474,61 @@ input[type="submit"] {
 .nav-compressed nav {
   display: none;
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   #nav-menu {
     position: fixed;
     top: 0;
     right: 0;
+    left: 0;
+    width: 100%;
     bottom: auto;
-    width: 80px;
-    min-height: 66px;
+    height: 60px;
+    min-height: 60px;
+    background: rgba(20, 20, 20, 0.8);
   }
-  .nav-compressed {
-    width: 50px !important;
-    opacity: 0.8;
+  #nav-menu #hide-menu-btn,
+  #nav-menu #show-menu-btn {
+    float: right;
+    margin-right: 20px;
+    margin-top: 0;
+    line-height: 60px;
+  }
+  #nav-menu nav {
+    margin-top: 0;
+  }
+  #nav-menu nav .logo {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  #nav-menu nav .logo img {
+    height: 40px;
+  }
+  #nav-menu nav #nav-menu-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border-top: thin solid #ffffff;
+    height: 60px;
+  }
+  #nav-menu nav #nav-menu-list .nav-menu-element {
+    display: inline-block;
+    width: 100%;
+    display: block;
+    margin-right: -5px;
+    margin-bottom: 0;
+    line-height: 60px;
+    background-color: #111111;
+  }
+  #nav-menu nav #nav-menu-list .nav-menu-element .nav-menu-btn {
+    padding: 0 10px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  #nav-menu nav #nav-menu-list .nav-menu-element .nav-menu-btn:focus {
+    background-color: #e6e6e6;
+    color: #111111;
   }
 }
 .divider,
@@ -588,10 +631,10 @@ input[type="submit"] {
   }
 }
 #contacts {
-  height: 772px;
   background-color: #ffffff;
   text-align: center;
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 #contacts h2 {
   margin-bottom: 60px;
@@ -614,7 +657,6 @@ input[type="submit"] {
 }
 @media (max-width: 480px) {
   #contacts {
-    height: 1100px;
     padding-top: 70px;
   }
   #contacts h2 {
@@ -666,7 +708,7 @@ header {
   text-align: center;
   color: #ffffff;
 }
-header #logo {
+header .logo {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -685,7 +727,7 @@ header h2:last-of-type {
     height: 600px;
     padding: 0 20px;
   }
-  header #logo {
+  header .logo {
     left: 0;
   }
   header h1 {

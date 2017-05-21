@@ -22,44 +22,87 @@ function countUp() {
 }
 
 function navigation() {
-    var navMenu = $('#nav-menu');
-    var timerObj = setTimeout(function () {
-        navMenu.addClass('nav-compressed');
-        toggleButtons();
-    }, 5000);
+    var windowWidth = $(window).width(),
+        navMenu = $('#nav-menu'),
+        showMenuBtn = $('#show-menu-btn'),
+        hideMenuBtn = $('#hide-menu-btn');
 
-    $('#hide-menu-btn').click(function (event) {
-        event.preventDefault();
-        toggleMenu();
-    });
+    var timerObj = null;
 
-    $('#show-menu-btn').click(function (event) {
-        event.preventDefault();
-        toggleMenu();
-    });
-    navMenu.mouseenter(function () {
-        clearTimeout(timerObj);
+    windowWidth <= 1200 ? menuForSmallScreen() : menuForLargeScreen();
+
+    $(window).resize(function () {
+        showMenuBtn.unbind();
+        hideMenuBtn.unbind();
+        navMenu.unbind();
+        $('.nav-menu-element').unbind();
+        clearInterval(timerObj);
         navMenu.removeClass('nav-compressed');
-        $('#hide-menu-btn').removeClass('none');
-        $('#show-menu-btn').addClass('none');
-    });
-    navMenu.mouseleave(function () {
-        if (!navMenu.hasClass('nav-compressed')) {
-            timerObj = setTimeout(function () {
-                navMenu.addClass('nav-compressed');
-                toggleButtons();
-            }, 2000);
-        }
+        $(window).width() <= 1200 ? menuForSmallScreen() : menuForLargeScreen();
     });
 
     function toggleButtons() {
-        $('#hide-menu-btn').toggleClass('none');
-        $('#show-menu-btn').toggleClass('none');
+        hideMenuBtn.toggleClass('none');
+        showMenuBtn.toggleClass('none');
     }
 
-    function toggleMenu() {
-        toggleButtons();
-        navMenu.toggleClass('nav-compressed');
+    // screen width <= 1200
+    function menuForSmallScreen() {
+        $('#nav-menu-list').hide();
+
+        hideMenuBtn.addClass('none');
+        showMenuBtn.removeClass('none');
+
+        function toggleSmallMenu() {
+            $('#nav-menu-list').fadeToggle();
+            toggleButtons();
+        }
+
+        function toggleMenuEventHandler(event) {
+            event.preventDefault();
+            toggleSmallMenu();
+        }
+
+        hideMenuBtn.click(toggleMenuEventHandler);
+        showMenuBtn.click(toggleMenuEventHandler);
+        $('.nav-menu-element').click(function () {
+            setTimeout(toggleSmallMenu, 600);
+        });
+    }
+
+    // screen width > 1200
+    function menuForLargeScreen() {
+        $('#nav-menu-list').show();
+
+        timerObj = setTimeout(function () {
+            navMenu.addClass('nav-compressed');
+            hideMenuBtn.addClass('none');
+            showMenuBtn.removeClass('none');
+        }, 5000);
+
+        function toggleMenuEventHandler(event) {
+            event.preventDefault();
+            toggleButtons();
+            navMenu.toggleClass('nav-compressed');
+        }
+
+        hideMenuBtn.click(toggleMenuEventHandler);
+        showMenuBtn.click(toggleMenuEventHandler);
+
+        navMenu.mouseenter(function () {
+            clearTimeout(timerObj);
+            navMenu.removeClass('nav-compressed');
+            hideMenuBtn.removeClass('none');
+            showMenuBtn.addClass('none');
+        });
+        navMenu.mouseleave(function () {
+            if (!navMenu.hasClass('nav-compressed')) {
+                timerObj = setTimeout(function () {
+                    navMenu.addClass('nav-compressed');
+                    toggleButtons();
+                }, 2000);
+            }
+        });
     }
 }
 
