@@ -106,11 +106,32 @@ function navigation() {
     }
 }
 
+function mapOverlay() {
+    var overlay = $('#map-overlay'),
+        map = $('#map');
+
+    overlay.click(function () {
+        $(this).addClass('none');
+        map.focus();
+    })
+
+    map.blur(function () {
+        overlay.removeClass('none');
+    });
+
+    map.mouseout(function () {
+        if (overlay.is(':hidden')) {
+            overlay.removeClass('none');
+        }
+    });
+}
+
 $(document).ready(function () {
     carousel.init();
     showHideWorkerInit();
     countUp();
     navigation();
+    mapOverlay();
 
     $("a").on('click', function (event) {
         if (this.hash !== "") {

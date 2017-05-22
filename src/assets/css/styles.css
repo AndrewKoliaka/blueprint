@@ -369,7 +369,7 @@ input[type="submit"] {
 #carousel #next-btn {
   right: 30px;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #carousel #prev-btn,
   #carousel #next-btn {
     top: 50%;
@@ -642,6 +642,19 @@ input[type="submit"] {
 #contacts h2 {
   margin-bottom: 60px;
 }
+#contacts #map-area {
+  position: relative;
+}
+#contacts #map-area #map {
+  z-index: 1;
+}
+#contacts #map-area #map-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
 #contacts address {
   margin-top: 55px;
   text-align: left;
@@ -666,7 +679,7 @@ input[type="submit"] {
     font-size: 1.5em;
     margin-bottom: 30px;
   }
-  #contacts #map,
+  #contacts #map-area,
   #contacts address {
     margin-top: 30px;
   }
@@ -697,7 +710,7 @@ footer #copyright,
 footer #socials {
   margin-top: 32.5px;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   footer {
     padding: 0 10px;
   }
@@ -725,7 +738,7 @@ header h2:last-of-type {
   margin-top: 20px;
   font-family: Lora, sans-serif;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   header {
     height: 600px;
     padding: 0 20px;

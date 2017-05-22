@@ -7,6 +7,19 @@
     h2 {
         margin-bottom: 60px;
     }
+
+    #map-area {
+        position: relative;
+        #map { z-index: 1; }
+        #map-overlay {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+
     address {
         margin-top: 55px;
         text-align: left;
@@ -31,7 +44,7 @@
             font-size: 1.5em;
             margin-bottom: 30px;
         }
-        #map, address {
+        #map-area, address {
             margin-top: 30px;
         }
     }
