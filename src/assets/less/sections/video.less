@@ -1,9 +1,9 @@
-#video-section {
+.video-section {
+    &:extend(.divider);
     height: 825px;
     text-align: center;
     border-top: thin solid transparent;
-    &:extend(.divider);
-    p {
+    &__text {
         margin-top: 100px;
         font-family: Raleway, sans-serif;
         color: @bg_dark;
@@ -14,20 +14,17 @@
 }
 
 @media screen and (max-width: 640px) {
-    #video-section {
-        video { 
-            width: 95%;
-            height: auto;
-        }
+    .video-section__video-player {
+        width: 95%;
+        height: auto;
     }
 }
 
 @media screen and (max-width: 480px) {
-    #video-section {
+    .video-section {
         height: 500px;
         padding: 0 10px;
-
-        p {
+        &__text {
             margin-top: 70px;
             font-size: 1em;
         }

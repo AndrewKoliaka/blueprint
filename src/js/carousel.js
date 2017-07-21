@@ -17,17 +17,17 @@
              });
              owl.on('changed.owl.carousel', function (event) {
                  var index = (event.item.index - 2) < 0 ? 2 : event.item.index - 2;
-                 var icon = $('.icon').get(index);
+                 var icon = $('.card-icon__wrapper').get(index);
 
-                 $($('.icon').get(last)).children().removeClass().addClass(iconNamesBlack[last]);
-                 $('.icon').removeClass('is-icon-active');
-                 $(icon).addClass('is-icon-active');
+                 $($('.card-icon__wrapper').get(last)).children().removeClass().addClass(iconNamesBlack[last]);
+                 $('.card-icon__wrapper').removeClass('card__icon-wrapper--active');
+                 $(icon).addClass('card__icon-wrapper--active');
                  $(icon).children().addClass(iconNamesWhite[index]);
                  last = index;
              });
-             $('#prev-btn').click(this.prevSlide);
-             $('#next-btn').click(this.nextSlide);
-             $('.expand-btn').click(this.expand);
+             $('.carousel-btn--prev').click(this.prevSlide);
+             $('.carousel-btn--next').click(this.nextSlide);
+             $('.btn--expand').click(this.expand);
 
              //  if slide in full screen - disable scrolling
              $('body').on('mousewheel', function (event) {
@@ -43,7 +43,7 @@
              owl.trigger('prev.owl.carousel');
          },
          expand: function (event) {
-             if ($('#expaded-slide').length === 1) {
+             if ($('.slide--expanded').length === 1) {
                  return false;
              }
              isScrollAllowed = false;
@@ -52,19 +52,19 @@
              var caption = $(slide.children().get(1));
 
              var expadedSlide = $(`
-            <div id="expanded-slide">
-                <span id="close-btn">
+            <div class="slide slide--expanded">
+                <span class="btn btn--close">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </span>
                 <figure>
-                    <img src="${img.attr('src')}" alt="${img.attr('alt')}">
-                    <figcaption>
+                    <img class="slide__img" src="${img.attr('src')}" alt="${img.attr('alt')}">
+                    <figcaption class="slide__caption">
                         ${caption.html()}
                     </figcaption>
                 </figure>
             </div>`).appendTo(document.body);
-             $('#close-btn').click(() => {
-                 $('#expanded-slide').remove();
+             $('.btn--close').click(() => {
+                 $('.slide--expanded').remove();
                  owl.trigger('play.owl.autoplay', [1000]);
                  isScrollAllowed = true;
              });

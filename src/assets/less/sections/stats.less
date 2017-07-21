@@ -1,15 +1,15 @@
-#stats {
+.stats {
     height: 580px;
     padding-top: 270px;
     text-align: center;
-    .number {
+    &__value {
         font-family: Lora, sans-serif;
         color: @secondary;
         font-size: 4em;
         font-weight: 400;
         line-height: 48px;
     }
-    .stat-name {
+    &__name {
         font-family: OpenSans, sans-serif;
         color: #2f2933;
         line-height: 2em;
@@ -17,7 +17,7 @@
         font-weight: 600;
         margin-top: 45px;
     }
-    .stat-desc {
+    &__desc {
         font-family: Lora, sans-serif;
         color: #2f2933;
         font-size: 0.875em;
@@ -27,28 +27,26 @@
 }
 
 @media screen and (max-width: 1200px) and (min-width: 640px) {
-    #stats {
+    .stats {
         height: 400px;
         padding-top: 100px;
     }
 }
 
 @media screen and (max-width: 640px) {
-    #stats {
+    .stats {
         height: 300px;
         padding-top: 50px;
-
-        .number {
+        &__value {
             font-size: 2em;
             line-height: 1em;
         }
-        .stat-name {
+        &__name {
             margin-top: 20px;
             font-size: 1em;
-            line-height: 1em; 
+            line-height: 1em;
         }
-
-        .stat-desc {
+        &__desc {
             line-height: 1.1em;
         }
     }

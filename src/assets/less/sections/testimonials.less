@@ -1,7 +1,7 @@
-#testimonials {
+.testimonials {
     text-align: center;
     .bg-image("testimonials_bg.jpg");
-    h2 {
+    &__header {
         font-family: Raleway, sans-serif;
         color: @accent;
         margin-top: 100px;
@@ -9,19 +9,13 @@
         font-weight: 700;
         line-height: 31px;
     }
-    .testimonial-wrapper {
+}
+
+.testimonial {
+    &__body {
         position: relative;
         border-radius: 3px;
         background-color: @secondary;
-        .testimonial-text {
-            font-family: Lora, sans-serif;
-            font-weight: 400;
-            font-size: 0.875em;
-            line-height: 1.875em;
-            text-align: left;
-            color: @accent;
-            padding: 45px 40px;
-        }
         .angle {
             width: 0;
             height: 0;
@@ -33,7 +27,16 @@
             left: 50px;
         }
     }
-    .testimonial-footer {
+    &__text {
+        font-family: Lora, sans-serif;
+        font-weight: 400;
+        font-size: 0.875em;
+        line-height: 1.875em;
+        text-align: left;
+        color: @accent;
+        padding: 45px 40px;
+    }
+    &__footer {
         margin-top: 25px;
         margin-bottom: 40px;
         text-align: left;
@@ -50,30 +53,33 @@
             padding-left: 20px;
             display: table-cell;
             vertical-align: middle;
-            span {
+            * {
                 padding-right: 15px;
             }
-            .testimonial-author {
-                text-transform: uppercase;
-            }
         }
+    }
+    &__author {
+        text-transform: uppercase;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #testimonials .testimonial-wrapper {
-        height: auto;
-        .testimonial-text {
+    .testimonials {
+        height: auto
+    }
+    .testimonial {
+        &__body {
+            height: auto;
+        }
+        &__text {
             padding: 10px 10px;
         }
     }
 }
 
 @media screen and (max-width: 992px) {
-    #testimonials {
-        h2 {
-            margin-top: 45px;
-            margin-bottom: 20px;
-        }
+    .testimonials__header {
+        margin-top: 45px;
+        margin-bottom: 20px;
     }
 }

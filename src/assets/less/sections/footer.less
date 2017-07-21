@@ -1,34 +1,33 @@
-footer {
+.footer {
     position: relative;
     bottom: 0;
     background-color: @bg_dark;
     color: #fbfbfb;
     height: 81px;
     opacity: 0.9;
-    #copyright {   
-        font-family: 'PlayfairDisplay';
+    &__copyright {
+        font-family: 'PlayfairDisplay', sans-serif;
         float: left;
-        strong {
-            font-family: 'Open-Sans';
+        .strong {
+            font-family: 'Open-Sans', sans-serif;
         }
     }
-
-    #socials {
-        float: right;
-        li {
-            margin-right: 20px;
-            display: inline-block;
-        }
-    }
-
-    #copyright, 
-    #socials {
+    &__copyright,
+    &__socials {
         margin-top: (81px - 16px) / 2;
     }
 }
 
+.socials {
+    float: right;
+    &__el {
+        margin-right: 20px;
+        display: inline-block;
+    }
+}
+
 @media screen and (max-width: 480px) {
-    footer {
+    .footer {
         padding: 0 10px;
     }
 }

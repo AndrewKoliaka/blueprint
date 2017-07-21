@@ -1,51 +1,55 @@
-#contacts {
+.contacts {
     &:extend(.divider);
     background-color: @accent;
     text-align: center;
     padding-top: 100px;
     padding-bottom: 50px;
-    h2 {
+    &__header {
         margin-bottom: 60px;
     }
+}
 
-    #map-area {
-        position: relative;
-        #map { z-index: 1; }
-        #map-overlay {
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            z-index: 10;
-        }
+.vcard {
+    margin-top: 55px;
+    text-align: left;
+    font-style: normal;
+    &__h {
+        font-size: 1.125em;
+        font-weight: 600;
+        line-height: 30px;
     }
+    &__adr,
+    &__tel {
+        font-family: 'Lora', sans-serif;
+        font-size: 0.875em;
+        line-height: 30px;
+    }
+}
 
-    address {
-        margin-top: 55px;
-        text-align: left;
-        font-style: normal;
-        h3 {
-            font-size: 1.125em;
-            font-weight: 600;
-            line-height: 30px;
-        }
-        .adr, .tel {
-            font-family: 'Lora', sans-serif;
-            font-size: 0.875em;
-            line-height: 30px;
-        }
+.map-area {
+    position: relative;
+    &__map {
+        z-index: 1;
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
     }
 }
 
 @media screen and (max-width: 992px) {
     #contacts {
         padding-top: 70px;
-        h2 {
+        &__header {
             font-size: 1.5em;
             margin-bottom: 30px;
         }
-        #map-area, address {
-            margin-top: 30px;
-        }
+    }
+    .map-area,
+    .vcard {
+        margin-top: 30px;
     }
 }

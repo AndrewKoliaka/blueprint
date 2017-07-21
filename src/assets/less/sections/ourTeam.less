@@ -1,46 +1,67 @@
-#our-team {
+.our-team {
     height: 683px;
     text-align: center;
-    background-image: url('@{images}divider.png'), url('@{images}our_team.jpg');
+    background-image: url('@{images}divider.png'),
+    url('@{images}our_team.jpg');
     background-repeat: repeat-x, no-repeat;
     background-position: top left, center center;
     background-size: auto, cover;
-    h2 {
+    &__header {
         margin-top: 100px;
         margin-bottom: 50px;
     }
-    #descriptions {
-        .worker-desc {
-            .worker-description;
-            bottom: -137px;
-            &:nth-child(1) {
-                left: -60px;
-            }
-            &:nth-child(2) {
-                left: 75px;
-            }
-            &:nth-child(3) {
-                left: 218px;
-            }
-            &:nth-child(4) {
-                left: 367px;
-            }
-            &:nth-child(5) {
-                left: 502px;
-            }
-            &:nth-child(6) {
-                left: 631px;
-            }
-            &:nth-child(7) {
-                left: 785px;
-            }
-            &:nth-child(8) {
-                left: 924px;
-            }
-        }
+}
+
+.worker-desc {
+    position: absolute;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: @accent;
+    box-shadow: 0px 6px 73px 0px rgba(11, 52, 94, 0.15);
+    width: 277px;
+    height: 137px;
+    text-align: center;
+    animation-duration: 0.5s;
+    bottom: -137px;
+    &:nth-child(1) {
+        left: -60px;
+    }
+    &:nth-child(2) {
+        left: 75px;
+    }
+    &:nth-child(3) {
+        left: 218px;
+    }
+    &:nth-child(4) {
+        left: 367px;
+    }
+    &:nth-child(5) {
+        left: 502px;
+    }
+    &:nth-child(6) {
+        left: 631px;
+    }
+    &:nth-child(7) {
+        left: 785px;
+    }
+    &:nth-child(8) {
+        left: 924px;
+    }
+    &__wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    &__profession {
+        font-family: Lora, sans-serif;
+        color: @bg_dark;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #our-team { height: 500px; }
+    .our-team {
+        height: 500px;
+    }
 }
