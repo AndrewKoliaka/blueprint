@@ -17,10 +17,14 @@
     },
     "homepage": "https://github.com/AndrewKoliaka/blueprint#readme",
     "devDependencies": {
+        "del": "^3.0.0",
         "gulp": "*",
         "gulp-autoprefixer": "*",
         "gulp-concat": "*",
         "gulp-connect": "*",
-        "gulp-less": "*"
-    }
+        "gulp-imagemin": "^3.3.0",
+        "gulp-less": "*",
+        "merge-stream": "^1.0.1"
+    },
+    "dependencies": {}
 }
