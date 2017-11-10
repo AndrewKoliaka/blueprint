@@ -1,0 +1,41 @@
+.footer {
+    background-color: @bg_dark;
+    color: #fbfbfb;
+    opacity: 0.9;
+
+    &__copyright {
+        font-family: @ffPFD;
+        float: left;
+        .strong {
+            font-family: @ffOpenSans-Regular;
+        }
+    }
+
+    &__copyright,
+    &__socials {
+        margin: (81px - 16px) / 2 0;
+    }
+}
+
+.socials {
+    float: right;
+
+    &__el {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    &__link {
+        transition: @tr3s;
+        
+        &:hover {
+            color: @secondary;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        padding: 0 10px;
+    }
+}

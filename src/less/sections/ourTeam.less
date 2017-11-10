@@ -1,0 +1,125 @@
+.our-team {    
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: url('@{images}divider.png'), url('@{images}our_team.jpg');
+    background-repeat: repeat-x, no-repeat;
+    background-position: top left, center center;
+    background-size: auto, cover;
+
+    &__header {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .container {
+        height: 100%;
+        position: relative;
+        padding-bottom: 410px;
+    }
+
+    &__toggle-btn {
+        .circle-button(@bg_color: @secondary, @font_color: @accent);
+        position: absolute;
+        cursor: pointer;
+
+        &:nth-child(1) {
+            left: 53px;
+            bottom: 252px;
+        }
+
+        &:nth-child(2) {
+            left: 194px;
+            bottom: 286px;
+        }
+
+        &:nth-child(3) {
+            left: 330px;
+            bottom: 242px;
+        }
+
+        &:nth-child(4) {
+            left: 475px;
+            bottom: 299px;
+        }
+
+        &:nth-child(5) {
+            left: 608px;
+            bottom: 225px;
+        }
+
+        &:nth-child(6) {
+            left: 738px;
+            bottom: 255px;
+        }
+
+        &:nth-child(7) {
+            left: 888px;
+            bottom: 306px;
+        }
+
+        &:nth-child(8) {
+            left: 1035px;
+            bottom: 231px;
+        }
+    }
+}
+
+.worker-desc {
+    position: absolute;
+    bottom: -138px;
+    padding: 50px 0;
+    width: 277px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: @accent;
+    box-shadow: 0px 6px 73px 0px rgba(11, 52, 94, 0.15);
+    text-align: center;
+    animation-duration: 0.5s;
+    
+    &:nth-child(1) {
+        left: -60px;
+    }
+    &:nth-child(2) {
+        left: 75px;
+    }
+    &:nth-child(3) {
+        left: 218px;
+    }
+    &:nth-child(4) {
+        left: 367px;
+    }
+    &:nth-child(5) {
+        left: 502px;
+    }
+    &:nth-child(6) {
+        left: 631px;
+    }
+    &:nth-child(7) {
+        left: 785px;
+    }
+    &:nth-child(8) {
+        left: 924px;
+    }
+
+    &__wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &__profession {
+        font-family: @ffLora;
+        color: @bg_dark;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .our-team {
+        .container {
+            padding-bottom: 200px;
+        }
+    }
+}

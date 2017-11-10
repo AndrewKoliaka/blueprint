@@ -1,0 +1,44 @@
+.btn {
+    cursor: pointer;
+    transition: @tr3s;
+
+    &--our-works {
+        display: inline-block;
+        width: 181px;
+        height: 50px;
+        margin-top: 60px;
+        font-family: @ffLora;
+        color: @secondary;
+        font-size: 1em;
+        font-weight: 400;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 3px;
+        background-color: @accent;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: darken(#fff, 5%);
+        }
+    }
+
+    &--scroll-down {
+        .circle-button(@bg_color: @accent, @font_color: #051741);
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &--expand {
+        .circle-button(@bg_color: @accent, @font_color: #000000, @font_size: 14px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -25px;
+        z-index: 9999;
+        margin: 0 auto;
+    }
+}

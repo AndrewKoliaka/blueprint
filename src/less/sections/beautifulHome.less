@@ -1,0 +1,92 @@
+@border: 2px solid @secondary;
+
+.beautiful-home {
+    &:extend(.divider);
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: #f9f9f9;
+
+    &__header {
+        margin-top: 99px;
+        margin-bottom: 55px;
+        color: @bg_dark;
+    }
+
+    &__right-line {
+        float: right;
+        margin-right: 15px;
+        height: 572px;
+        border-left: @border;
+    }
+
+    &__bottom-line {
+        position: absolute;
+        bottom: 60px;
+        right: 15px;
+        width: 140px;
+        border-bottom: @border;
+    }
+
+    .container {
+        position: relative;
+    }
+}
+
+.card {
+    text-align: left;
+    border-left: @border;
+    border-bottom: @border;
+    cursor: pointer;
+    transition: @tr3s;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    &__top-serif {
+        width: 30px;
+        border-top: @border;
+    }
+
+    &__icon-wrapper {
+        margin: 5px;
+        float: left;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        transition: all 0.3s;
+
+        &--active {
+            background-color: @secondary;
+        }
+    }
+
+    &__icon {
+        margin-top: (50px - 24px) / 2;
+    }
+
+    &__name {
+        margin-top: 10px;
+        margin-left: 90px;
+    }
+
+    &__text {
+        margin-left: 90px;
+        font-family: @ffLora;
+        font-size: 1em;
+        line-height: 2em;
+        color: #767676;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .beautiful-home {
+        padding-bottom: 50px;
+    }
+    .card {
+        padding-top: 10px;
+        padding-left: 10px;
+        border: none;
+    }
+}

@@ -1,0 +1,32 @@
+.video-section {
+    &:extend(.divider);
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid transparent;
+
+    &__text {
+        padding: 0 10px;
+        font-family: Raleway, sans-serif;
+        color: @bg_dark;
+        font-size: 1.313em;
+        font-weight: 500;
+        line-height: 1.938em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-section {
+        padding: 50px 0px;
+    }
+
+    .video-section__video-player {
+        width: 95%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-section__text {
+        font-size: 1em;
+    }
+}

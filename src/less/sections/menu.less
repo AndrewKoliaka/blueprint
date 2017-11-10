@@ -1,0 +1,134 @@
+.menu-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9990;
+    width: 60px;
+    background-color: @bg_dark;
+    color: @accent;
+    text-align: center;
+    transition: all 0.4s;    
+    opacity: 0.9;
+
+    &--compressed {
+        width: 30px !important;
+        
+        .menu-panel__site-nav {
+            display: none;
+        }
+    }
+
+    &__toggle {
+        margin-top: 25px;
+        display: inline-block;
+    }
+
+    &__site-nav {
+        margin-top: 115px;
+    }
+}
+
+.menu-el {
+    position: relative;
+    margin-bottom: 45px;
+    width: 100%;
+
+    &:hover &__hover-item {
+        display: block;
+    }
+
+    &__hover-item {
+        position: absolute;
+        left: -102px;
+        display: none;
+        padding: 1px;
+        width: 130px;
+        font-size: 0.813em;
+        text-align: center;
+        text-transform: uppercase;
+        transform: rotate(270deg);
+        transition: 1s all;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 20px;
+            height: 19px;
+            width: 1px;
+            margin: 0 auto;
+            background-color: @accent;    
+        }
+    }
+
+    &__wrapper {
+        background-color: @bg_dark;
+        padding: 3px;
+    }
+
+    &__btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .menu-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        bottom: auto;
+
+        &__toggle {
+            float: right;
+            margin-right: 20px;
+            margin-top: 0;
+            line-height: 60px;
+        }
+
+        &__site-nav {
+            margin-top: 0;
+
+            .logo {
+                float: left;
+                margin-left: 10px;
+                margin-top: 10px;
+
+                img {
+                    height: 40px;
+                }
+            }
+
+            .nav-menu-list {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                border-top: thin solid @accent;
+            }
+        }
+    }
+
+    .menu-el {
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        margin-right: -5px;
+        margin-bottom: 0;
+        background-color: @bg_dark;
+
+        &__btn {
+            padding: 0 10px;
+            transition: @tr3s;
+
+            &:focus {
+                background-color: darken(@accent, 10%);
+                color: @bg_dark;
+            }
+        }
+    }
+}

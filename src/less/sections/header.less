@@ -1,0 +1,50 @@
+.site-header {
+    .bg-image("header_bg.jpg");
+    position: relative;
+    padding-bottom: 320px;
+    text-align: center;
+    color: @accent;
+
+    &__logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    &__top-h {
+        margin-top: 320px;
+        font-family: @ffExo;
+        margin-bottom: 28px;
+    }
+
+    &__bottom-h {
+        margin-top: 20px;
+        font-family: @ffLora;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .site-header {
+        padding: 0 20px;
+        padding-bottom: 200px;
+
+        &__logo {
+            left: 0;
+        }
+
+        &__middle-h {
+            font-size: 2em;
+        }
+
+        &__top-h {
+            margin-top: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .site-header {
+        padding-bottom: 50px;
+    }
+}

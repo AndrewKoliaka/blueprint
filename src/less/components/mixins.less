@@ -1,0 +1,45 @@
+.bg-image(@imageName, @pos: center center) {
+    background-image: url("@{images}@{imageName}");
+    background-repeat: no-repeat;
+    background-position: @pos;
+    background-size: cover;
+}
+
+.divider {
+    background-image: url("@{images}divider.png");
+    background-position: top left;
+    background-repeat: repeat-x;
+}
+
+.close-button(@size: 20px) {
+    color: @accent;
+    font-size: @size;
+}
+
+.circle(@bg_color: @accent, @diametr: 32px) {
+    display: inline-block;
+    height: @diametr;
+    width: @diametr;
+    background-color: @bg_color;
+    border-radius: 50%;
+}
+
+.circle-button(@bg_color: @accent, @font_color: @accent, @font_size: 21px) {
+
+    .circle(@bg_color, 50px);
+    box-shadow: 0 5px 18px 0 rgba(22, 99, 178, 0.3);
+    text-align: center;
+    transition: @tr3s;
+
+    &:hover {
+        background-color: darken(@bg_color, 5%);
+    }
+
+    i {
+        margin-top: (50px - @font_size)/2;
+        line-height: 1;
+        color: @font_color;
+        font-weight: 400;
+        font-size: @font_size;
+    }
+}

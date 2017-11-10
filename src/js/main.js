@@ -1,11 +1,17 @@
+//= "../assets/libs/jquery/dist/jquery.min.js"
+//= "../assets/libs/OwlCarousel/owl.carousel.min.js"
+//= "../assets/libs/waypoints/lib/jquery.waypoints.min.js"
+//= "../assets/libs/jquery.counterup/jquery.counterup.min.js"
+//= "carousel.js"
+
 var ClassName = {
     MENU_PANEL: 'menu-panel',
     MENU_PANEL__COMPRESSED: 'menu-panel--compressed',
     MENU_EL: 'menu-el',
     NAV_MENU_LIST: 'nav-menu-list',
-    BTN__SHOW_MENU: 'btn--show-menu',
-    BTN__HIDE_MENU: 'btn--hide-menu',
-    BTN__SHOW_INFO: 'btn--show-info',
+    BTN__SHOW_MENU: 'menu-panel__toggle--show',
+    BTN__HIDE_MENU: 'menu-panel__toggle--hide',
+    BTN__SHOW_INFO: 'our-team__toggle-btn',
     NONE: 'none'
 }
 
@@ -42,7 +48,7 @@ function showHideWorkerInit() {
 }
 
 function countUp() {
-    $('.number').counterUp();
+    $('.stats__value').counterUp();
 }
 
 function navigation() {
@@ -163,6 +169,10 @@ $(document)
         countUp();
         navigation();
         mapOverlay();
+
+        $('.card').click(function() {
+            carousel.slideTo($(this).data('index'));
+        });
 
         $("a").on('click', function (event) {
             if (this.hash !== "") {
