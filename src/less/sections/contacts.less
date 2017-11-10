@@ -1,9 +1,10 @@
 .contacts {
     &:extend(.divider);
-    background-color: @accent;
-    text-align: center;
     padding-top: 100px;
     padding-bottom: 50px;
+    background-color: @accent;
+    text-align: center;
+
     &__header {
         margin-bottom: 60px;
     }
@@ -13,11 +14,13 @@
     margin-top: 55px;
     text-align: left;
     font-style: normal;
+
     &__h {
         font-size: 1.125em;
         font-weight: 600;
         line-height: 30px;
     }
+
     &__adr,
     &__tel {
         font-family: @ffLora;
@@ -28,9 +31,11 @@
 
 .map-area {
     position: relative;
+
     &__map {
         z-index: 1;
     }
+
     &__overlay {
         position: absolute;
         top: 0;
@@ -41,6 +46,7 @@
 }
 
 @media screen and (max-width: 992px) {
+
     #contacts {
         padding-top: 70px;
         &__header {
@@ -48,6 +54,7 @@
             margin-bottom: 30px;
         }
     }
+    
     .map-area,
     .vcard {
         margin-top: 30px;
