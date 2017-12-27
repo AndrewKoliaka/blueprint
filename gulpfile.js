@@ -91,7 +91,11 @@ gulp.task('assets:build', () => {
 gulp.task('assets:prod', () => {
     let images = gulp
         .src(PATH.src.images)
-        .pipe(imagemin())
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 10}),
+        ]))
         .pipe(gulp.dest(PATH.prod.images));
 
     let fonts = gulp
