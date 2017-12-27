@@ -1,4 +1,3 @@
-//= "../assets/libs/jquery/dist/jquery.min.js"
 //= "../assets/libs/OwlCarousel/owl.carousel.min.js"
 //= "../assets/libs/waypoints/lib/jquery.waypoints.min.js"
 //= "../assets/libs/jquery.counterup/jquery.counterup.min.js"
